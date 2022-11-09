@@ -1,0 +1,561 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+/* בכל חלק בגריד יהיו שני "דיבים" שיעטפו את האזור על מנת לתת אשלייה של "תלת מימד" א */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ffffff;
+    font-family: 'Comfortaa', cursive;
+    line-height: 1.7;
+}
+
+.grid_container {
+    max-width: 1440px;
+    padding: 20px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4, 1fr)
+}
+/* ****************************** תחילת השורה הראשונה בגריד ************************************************* */
+   
+.main_title {
+    background-image: url('./imegs/logo.png'),linear-gradient(140deg,#01B1BE ,#07657E);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: contain;
+    mix-blend-mode: multiply;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: rgba(17, 12, 46, 0.90) 0px
+    48px 100px 0px;
+    min-width: 800px;
+}
+
+.main_title header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ff7f24; 
+    font-size: 35px;
+    font-weight: bolder;
+}
+
+.main_title h1 {
+    animation-name: code_fox;
+    animation-iteration-count: infinite;
+    animation-duration: 5s; 
+}
+/* הוספת אנימציה לכותרת הראשית */
+@keyframes code_fox {
+    0% {color:#07657E;}
+  25%  {color:#01B1BE;}
+  50%  {color:#efe8f5;}
+  75%  {color:#e8e8e8;}
+  100% {color:#ff7f24;}
+}
+
+/* ****************************** סוף השורה הראשונה בגריד ************************************************* */
+
+
+/* ****************************** תחילת השורה השנייה בגריד ************************************************* */
+
+.main_top {
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px
+    48px 100px 0px;
+    /* המיקס בלנד מוריד את הרקע הלבן מהתמונה */
+    mix-blend-mode: multiply; 
+    /* הבלנד מוד מטמיע את התמונה ברקע   */
+    background-blend-mode: multiply;
+    background-image: url("./imegs/fox3.png"),linear-gradient(to bottom,#e8e8e8,#efe8f5 ,#07657E);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; 
+}
+ 
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.main section {
+    max-width: 500px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0);
+    box-shadow: rgba(17, 12, 46, 0.90) 0px
+    48px 100px 0px;
+}
+
+.main h1 {
+    margin: 30px;
+    color: #ff5800;
+    font-size: 30px;
+    text-shadow: rgba(0, 0, 0, 0.9) 0px
+    48px 100px 0px;
+}
+
+.main p {
+    margin: 30px;
+    color: #ff5800;
+    font-size: 15px;
+}
+
+form {
+    max-width: 400px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0);
+    padding: 25px 25px;
+    color: #ff5800;
+    font-size: 20px;
+    font-weight: bolder;
+    box-shadow: rgba(17, 12, 46, 0.90) 0px
+    48px 100px 0px;
+}
+
+.form-group {
+    margin-top: 15px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: #ffffff 1.5px solid;
+    background: #ffffff00;
+    border-radius: 5px;
+}
+
+#bottom-text {
+    font-size: 8px;
+    font-weight: bolder;
+    margin-top: 20px;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 35px;
+    font-size: 20px;
+    font-weight: bold;
+    color:#ff5800 ;
+    background: #e8e8e8;
+    border: 1px solid #e8e8e8;
+    box-shadow: 6px 6px 12px #c5c5c5,
+             -6px -6px 12px #ffffff;
+    cursor: pointer;
+}
+
+.btn:hover {
+    border: 1px solid white;
+    box-shadow: 4px 4px 12px #c5c5c5,
+                -4px -4px 12px #ffffff;
+}
+
+/* ****************************** סוף השורה השנייה בגריד ************************************************* */
+
+
+/* ****************************** תחילת השורה השלישית בגריד ************************************************* */
+
+.main_middle {
+    border-radius: 10px;
+    padding: 30px;
+    background: linear-gradient(to bottom,#e8e8e8,#efe8f5 ,#07657E);
+}
+
+.middle {
+    display: flex;
+    justify-content: space-around;
+    background: linear-gradient(to bottom,#07657E,#e8e8e8,#efe8f5 );
+    box-shadow: rgba(17, 12, 46, 0.90) 0px
+    48px 100px 0px;
+    border-radius: 10px;
+}
+
+/* בחלק הזה הוספתי rotate,transtion,translate,z-index */
+
+.card {
+    width: 355px;
+    height: auto;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    rotate: 3deg;
+    transition: 0.5s;
+    background: linear-gradient(to bottom,#e8e8e8,#efe8f5 ,#07657E);
+    box-shadow: rgba(17, 12, 46, 0.90) 0px
+    48px 100px 0px;
+    text-align: left;
+    box-sizing: content-box;
+}
+
+.card img {
+    background-blend-mode: multiply;
+    mix-blend-mode: multiply;
+    width: 300px;
+    height: auto;
+}
+
+.card h3{
+    font-size: 18px;
+    font-weight: bolder;
+    color: #ff5800;
+}
+
+.card p {
+    font-size: 13px;
+    font-weight: bolder;
+    color: #ff5800;
+}
+
+#card_1 {
+    translate: 100px;
+}  
+   
+#card_3 {
+    translate: -100px;
+} 
+
+.card:hover {
+    transition-timing-function: linear;
+    rotate: 0deg;
+    transform: scale(1.2,1.2);
+    z-index: 1;
+    box-shadow: rgba(17, 12, 46, 0.90) 0px
+    48px 100px 0px;
+}
+
+/* ****************************** סוף השורה השלישית בגריד ************************************************* */
+
+
+/* ****************************** תחילת השורה הרביעית בגריד ************************************************* */
+
+.main_bottom {
+    border-radius: 10px;
+    padding: 30px;
+    background: linear-gradient(to bottom,#e8e8e8,#efe8f5 ,#07657E);
+    box-shadow: rgba(17, 12, 46, 0.90) 0px
+    48px 100px 0px;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: rgba(17, 12, 46, 0.90) 0px
+    48px 100px 0px;
+    background: linear-gradient(to bottom,#07657E,#e8e8e8,#efe8f5 );
+}
+
+.bottom img {
+    width: 300px;
+    height: 300px;
+    margin: 20px 40px 0;
+    border-radius: 50%;
+    background: #e8e8e8;
+    border: 1px solid #e8e8e8;
+    transition: all .3s;
+    box-shadow: rgba(17, 12, 46, 0.90) 0px
+    48px 100px 0px;
+}
+
+.bottom p {
+    margin-top: 25px;
+    font-size: 18px;
+    color: #ff5800;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.bottom h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #ff5800;
+    font-weight: bolder;
+    text-align: center;
+}
+
+hr {
+    width: 40%;
+    border: #07657E 2px solid; 
+    border-radius: 10px;
+}
+
+/* ****************************** סוף השורה הרביעית בגריד ************************************************* */
+
+
+/* ****************************** תחילת השורה החמישית בגריד ************************************************* */
+footer {
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px
+    48px 100px 0px;
+    background:linear-gradient(140deg,#01B1BE ,#07657E); 
+}
+
+.footer_flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+footer a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bolder;
+    margin: 10px;
+    padding: 10px;
+    color: #ff5800;
+}
+
+footer span {
+    font-size: 20px;
+    font-weight: bolder;
+    margin: 10px;
+    color: #ff5800;
+}
+
+/* ****************************** סוף השורה החמישית בגריד ************************************************* */
+
+
+/* ****************************** מבנה הגריד - grid layout ************************************************* */
+
+.main_title {
+    grid-column: 1/5;
+}
+
+.main_top {
+    grid-column: 1/5;
+    grid-row: 2/3;
+}
+
+.main_middle {
+    grid-column: 1/5;
+    grid-row: 3/4;
+}
+
+.main_bottom {
+    grid-column: 1/5;
+    grid-row: 4/5;
+}
+
+footer {
+    grid-column: 1/5;
+    grid-row: 5/6;
+}
+
+
+/* ****************************** עיצוב רספונסיבי ************************************************* */
+
+@media (max-width: 744px) {
+.grid_container {
+    grid-template-columns: repeat(auto-fill, minmax(300px,auto));
+    
+    
+}
+
+.main_title {
+   grid-column: 1;
+}
+
+.main_title header {
+    font-size: 10px;
+    margin-left: 60px;
+}
+
+.main_top {
+    grid-column: 1;
+}
+
+.main {
+    flex-direction: column-reverse;
+}
+
+.main section {
+    max-width: 335px;
+    margin-top: 25px;
+}
+
+.main h1 {
+    margin: 13px;
+    
+}
+
+.main p {
+    margin: 10px;
+}
+
+.main_middle {
+    grid-column: 1;
+}
+
+.middle {
+   flex-direction: column;
+   padding: 5px 0 25px;
+}
+
+.card {
+    margin: auto;
+    width: 250px;
+    height: auto;
+    rotate: 0deg;
+    margin-top: 20px;
+    
+}
+
+.card img {
+    width: 250px;
+    height: auto;
+}
+
+.card h3{
+    font-size: 15px;
+    margin: auto;
+}
+
+.card p {
+    font-size: 8px;
+    margin: auto;
+}
+
+#card_1 {
+    translate: 0;
+}  
+   
+#card_3 {
+    translate: 0;
+} 
+
+
+
+.main_bottom {
+    grid-column: 1;
+}
+
+.bottom img {
+    width: 150px;
+    height: 150px;
+    margin-left: 40px;
+}
+
+.bottom p {
+   font-size: 10px;  
+}
+
+.bottom h3 {
+    font-size: 10px;
+}
+
+footer {
+    grid-column: 1;
+}
+
+footer a {
+    font-size: 7px;
+    margin: auto;
+}
+
+footer span {
+    font-size: 7px;
+}
+}
+
+@media (max-width: 1200px) {
+    .main_title header {
+        font-size: 20px;
+        margin-left:60px;
+    }
+
+    .main_title {
+        min-width: 100%;
+     }
+}
+
+@media (max-width: 1000px) {
+    .main_title header {
+        font-size: 20px;
+        margin-left: 60px;
+    }
+
+    .main_title {
+        min-width: 100%;
+     }
+
+    .main section {
+        max-width: 335px;
+    }
+    
+    .main h1 {
+        margin: 13px;
+        
+    }
+    
+    .main p {
+        margin: 10px;
+    }
+}
+
+@media (max-width: 800px) {
+    .main_title header {
+        font-size: 10px;
+        margin-left: 100px;
+    }
+
+    .main_title {
+        min-width: 100%;
+     }
+
+    .main section {
+        max-width: 335px;
+    }
+    
+    .main h1 {
+        margin: 13px;
+        
+    }
+    
+    .main p {
+        margin: 10px;
+    }
+
+    .card {
+        width: 200px;
+        height: auto;
+        rotate: 0deg;
+    }
+
+    .card img {
+        width: 200px;
+        height: auto;
+    }
+    
+    .card h3{
+        font-size: 10px;
+        margin: auto;
+    }
+    
+    .card p {
+        font-size: 10px;
+        margin: auto;
+    }
+
+    footer a {
+        font-size: 5px;
+        padding: 0;
+        margin: auto;
+    }
+    
+    footer span {
+        font-size: 5px;
+    }
+}
